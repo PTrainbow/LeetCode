@@ -38,6 +38,23 @@ public class LeetCode146 {
     }
 
     /**
+     * LinkedHashMap
+     */
+    static class LRUCache2 extends LinkedHashMap<Integer, Integer> {
+        private int maxSize = 0;
+
+        public LRUCache2(int capacity) {
+            super(capacity);
+            maxSize = capacity;
+        }
+
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+            return size() > maxSize;
+        }
+    }
+
+    /**
      * 当然可以使用 LinkedHashMap, 但是那样就没意义了
      * 此处考察双向链表操作
      * removeTail 的时候第一遍写错了
