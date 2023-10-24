@@ -1,9 +1,5 @@
 package WeekContest;
 
-import jdk.tools.jmod.Main;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Contest368 {
     public static void main(String[] args) {
